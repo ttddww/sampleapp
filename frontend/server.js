@@ -6,7 +6,7 @@ const app= express();
 //Serve the static files from the react app
 app.use(express.static(path.join(__dirname, "build")));
 //Redirect every request to index.html
-app.get('/*', function (req, res) {
+app.get('*', function (req, res) {
     res.sendFile(path.join (__dirname + "build","index.html"));
 });
 //Listen to the default port 80
